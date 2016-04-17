@@ -15,10 +15,11 @@ gulp.task('styles', () => {
     .pipe(reload({stream:true}));
     });
 gulp.task('scripts', () => {
-    gulp.src('./dev/scripts/scripts.js')
+    gulp.src('./dev/scripts/**/*.js')
     .pipe(babel({
         presets: ['es2015']
         }))
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('./public/scripts'))
     .pipe(reload({stream:true}));
     });
@@ -29,7 +30,7 @@ gulp.task('browser-sync', () => {
 });
 gulp.task('watch', () => {
     gulp.watch('./dev/styles/**/*.scss', ['styles']);
-    gulp.watch('./dev/scripts/*.js', ['scripts']);
+    gulp.watch('./dev/scripts/**/*.js', ['scripts']);
     gulp.watch('./*.html', reload);
     });
 gulp.task('default', ['browser-sync', 'styles', 'scripts', 'watch']);
