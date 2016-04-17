@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Trumpem Ipsum</title>
-	<link rel="stylesheet" href="public/styles/main.css">
+	<link rel="stylesheet" href="public/styles/style.css">
     <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,20 +14,17 @@
 			<h4>Ipsum generator</h4>
 			<div class="typeSliderBox">
 				<p>Paragraph</p>
-				<input id="range" min="1" max"2" step="1" value="1">
+				<input type="range" min="1" max="10" step="1" value="1">
 				<p>Sentence</p>
 			</div>
 			<div class="sentenceSlider">
-				 <div class="switch">
-				      <input id="range" min="1" max"4" step="1" value="1">
-   				 </div>
+				<input type="range" min="1" max="4" step="1" value="1">
 			</div>
-			<div class="paragraphSlider">
-				 <div class="switch">
-				      <input id="range" min="1" max"10" step="1" value="1">
-   				 </div>
-			</div>
+		<!-- 	<div class="paragraphSlider">
+				<input type="range" min="1" max="10" step="1" value="1">
+			</div> -->
 			<input type="submit" class="copyButton" value="copy">
+
 			<footer>
 				<p>Made by<a href="#"></a> and <a href="#"></a>
 			</footer>
