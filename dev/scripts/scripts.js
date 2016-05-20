@@ -1,3 +1,9 @@
+//FIND USER'S SENTENCE/PARAGRAPH SELECTION
+
+//FIND USER'S LENGTH SELECTION
+
+/
+
 // $( document ).ready(function() {
 //     console.log( "ready!" );
 
