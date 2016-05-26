@@ -4,6 +4,8 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
+
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 gulp.task('styles', () => {
@@ -16,9 +18,10 @@ gulp.task('styles', () => {
     });
 gulp.task('scripts', () => {
     gulp.src('./dev/scripts/**/*.js')
+    .pipe(plumber())
     .pipe(babel({
         presets: ['es2015']
-        }))
+    }));
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('./public/scripts'))
     .pipe(reload({stream:true}));
