@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+	// DESKTOP
+
 	// SLIDER SELECT
 	$('.numberSlider').ionRangeSlider({
 	    min: 1,
@@ -7,10 +9,38 @@ $( document ).ready(function() {
 	    from: 1
 	});
 
+	// SET VARIABLE FOR SLIDER NUMBER
+	var sliderNumber;
+
+	$('.numberSlider').on('change',function() {
+		sliderNumber = this.value;
+		console.log(this.value);
+	});
+
+	//FIND USER'S SENTENCE/PARAGRAPH SELECTION 
+
+	$('[name="selection"]').on('click',function() {
+		var textArray = text[this.value];
+		// CHOOSE RANDOM NUMBERED ITEM FROM ARRAY
+
+		for (var i = 0; i < sliderNumber; i++) {
+		var arraySelection = Math.floor(Math.random() * (textArray.length) + 1);
+		var resultsToPage = textArray[arraySelection];
+		console.log(resultsToPage);	
+		// $(".ipsumTextOutput").text(resultsToPage);
+		$(".ipsumOutput").append(`<p>${resultsToPage}</p>`);
+		}
+		// DISPLAY ON PAGE
+
+
+	});
+
+	// MOBILE
+
 	// SET VARIABLE FOR INPUT NUMBER
 	var numberSelect;
 
-	// PLUS+MINUS- SELECT
+	// PLUS/MINUS SELECT
 	//FIND USER'S LENGTH SELECTION
 	$('.plus, .minus').on('click', function() {
 
@@ -34,28 +64,33 @@ $( document ).ready(function() {
 		console.log(numberSelect);
 	});
 
-	var sliderNumber = parseInt($('.irs-single').text());
-	console.log(sliderNumber);
-
 	//FIND USER'S SENTENCE/PARAGRAPH SELECTION 
+
+	// var resultsToPost;
+
 	$('[name="selection"]').on('click',function() {
 		var textArray = text[this.value];
 		// CHOOSE RANDOM NUMBERED ITEM FROM ARRAY
 
 		for (var i = 0; i < numberSelect; i++) {
 		var arraySelection = Math.floor(Math.random() * (textArray.length) + 1);
-		console.log(textArray[arraySelection]);	
-		}
-
+		var resultsToPost = (textArray[arraySelection])
 		// DISPLAY ON PAGE
+		// $(".ipsumOutput").append(`<p>${resultsToPost}</p>`);
+		// console.log(resultsToPost);	
+		}
 
 	});
 
-
-
-
-
 //DISPLAY WORDS ON PAGE
 });
+
+// SHOW/HIDE ON WINDOW RESIZE
+
+// var screenSize = $(window).width();
+// if (screenSize < 600px) {}
+
+
+
 
 

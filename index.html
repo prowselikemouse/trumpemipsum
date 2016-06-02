@@ -21,11 +21,6 @@
 				<div class="numberSliderBox">
 					<input class="numberSlider" type="text" id="range" value="" name="range" />
 				</div>
-				<div class="numberSelectMobile">
-					<button class="minus" data-increment="-1"><span>-</span></button>
-					<input type="text" name="numberSelect" id="numberSelect" value="1">
-					<button class="plus" data-increment="1"><span>+</span></button>
-				</div>
 				<div class="typeButtons">
 					<div class="sentenceButton">
 						<label for="sentece">
@@ -43,8 +38,13 @@
 						<input type="radio" name ="selection" value="paragraphs">
 					</div>
 				</div>
+				<div class="numberSelectMobile">
+					<button class="minus" data-increment="-1"><span>-</span></button>
+					<input type="text" name="numberSelect" id="numberSelect" value="1">
+					<button class="plus" data-increment="1"><span>+</span></button>
+				</div>
 				<div class="typeSelectMobile">
-					<select name="" id="">
+					<select name="" id="sentenceParagraphSelect">
 						<option value="1">sentence</option>
 						<option value="2">paragraph</option>
 					</select>
@@ -58,8 +58,7 @@
 			<div class="trumpImage">
 			</div>
 			<div class="ipsumOutput">
-				<img src="" alt="">
-				<p class="output"></p>
+				<!-- <img src="" alt=""> -->
 			</div>
 		</section>
 
@@ -73,5 +72,6 @@
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	 <script src="public/scripts/ion.rangeSlider.min.js"></script>
 	 <script src="public/scripts/scripts.js"></script>
+
 </body>
 </html>
