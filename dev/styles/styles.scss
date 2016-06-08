@@ -1,3 +1,7 @@
+@font-face {font-family: Engcomica;
+    src:url("Engcomica.otf");
+}
+
 html,
 body {
   color: #404040;
@@ -14,4 +18,9 @@ body {
 
 h1 {
   font-weight: 300;
+}
+
+.output {
+	width: 70
+
 }
