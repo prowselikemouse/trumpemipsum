@@ -1,6 +1,15 @@
 $( document ).ready(function() {
 
 	// DESKTOP
+	$("#paragraphButton").on("click", function() {
+		console.log("click")
+    $("#paragraphButton img").css("display", "block");
+    $("#sentenceButton img").css("display", "none");
+})
+	$("#sentenceButton").on("click", function() {
+    $("#sentenceButton img").css("display", "block");
+    $("#paragraphButton img").css("display", "none");
+})
 
 	// SLIDER SELECT
 	$('.numberSlider').ionRangeSlider({

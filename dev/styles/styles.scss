@@ -1,3 +1,7 @@
+$lightGrey: #a7a9ac;
+$lightBlue: #6acce6;
+$lightRed: #EF5362;
+
 @font-face {font-family: Engcomica;
     src:url("Engcomica.otf");
 }
@@ -7,20 +11,186 @@ body {
   color: #404040;
   height: 100%;
   margin: 0;
+  padding: 0;
+  font-family: "Engcomica", sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+img {
+	max-width: 100%;
 }
 
+button {
+	border: none;
+	outline: none;
+	background: none;
+}
 h1 {
   font-weight: 300;
 }
 
-.output {
-	width: 70
+.wrapper {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap:wrap;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+// +++++++++++++++++++++++++++++++
+// Left Side
+// +++++++++++++++++++++++++++++++
+
+.input {
+	width: 30%;
+	height: 90vh;
+	padding:20px;
+}
+
+.introTextBox {
+	font-family: "Engcomica", sans-serif;
+	text-align: center;
+	color: $lightGrey;
+	margin-bottom: 50px; 
+	img {
+		width: 80%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	h4 {
+		font-size: 2rem;
+		margin: 0;
+		letter-spacing: 2px;
+	}
+	p {
+		font-size: 1.2rem;
+		padding: 0 15px;
+		letter-spacing: 1px;
+	}
+}
+
+// +++++++++++++++++++++++++++++++
+// Paragraph/Sentence buttons
+// +++++++++++++++++++++++++++++++
+
+input[type="radio"] {
+	display: none;
+}
+
+.typeButtons {
+	margin: 20px 0 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 
+	align-items: center;
 
 }
+
+.button {
+	width: 100px;
+	height: 50px;
+	position: relative;
+	img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);
+	}
+	span {
+		position: absolute;
+		letter-spacing: 1.5px;
+		font-size: 1.3rem;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);
+		color: white;
+		font-family: "Engcomica", sans-serif;
+	}
+}
+
+.sentenceButton img {
+	display: none;
+}
+
+.sentenceButton span {
+	color: $lightGrey;
+}
+
+#dash {
+	padding: 0 10px;
+	color: $lightGrey;
+}
+
+// +++++++++++++++++++++++++++++++
+// Right Side
+// +++++++++++++++++++++++++++++++
+
+.output {
+	background: url(../images/bg.svg);
+	background-size: 140%;
+	background-size: cover;
+	background-position: 14% 74%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 66%;
+	height:  100vh;;
+	overflow: hidden;
+	position: relative;
+}
+
+.trumpImage img {
+	width: 100%;
+	position: absolute;
+	bottom: -20px;
+	left: -20%;
+}
+
+.bg img {
+	min-height: 100%;
+	min-width: 100%;
+}
+
+// +++++++++++++++++++++++++++++++
+// Footer
+// +++++++++++++++++++++++++++++++
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	padding: 10px;
+	background: white;
+	p {
+		margin: 0;
+		letter-spacing: 1px;
+		opacity: .7;
+		a {
+			text-decoration: none;
+			color: $lightBlue;	
+			transition: .4s all ease;
+			&:hover {
+				color: $lightRed;
+			}
+		}
+	}
+}
+
+// +++++++++++++++++++++++++++++++
+// Mobile
+// +++++++++++++++++++++++++++++++
+
+.numberSelectMobile, .typeSelectMobile {
+	display: none;
+}
+
+
