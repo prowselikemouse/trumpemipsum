@@ -14,30 +14,37 @@
 		<section class="input">
 			<div class="container">
 				<div class="introTextBox">
-					<h1>Trumpem<br>Ipsum</h1>
+					<img src="public/images/title2.svg" alt="Trumpem Ipsum">
+
 					<h4>Ipsum generator</h4>
 					<p>Need some non-sensical filler text for your design or development project? ***!!!</p>
 				</div>
+
 				<div class="numberSliderBox">
 					<input class="numberSlider" type="text" id="range" value="" name="range" />
 				</div>
+
 				<div class="typeButtons">
-					<div class="sentenceButton">
-						<label for="sentece">
-							<img src="" alt="">
+
+					<div class="sentenceButton button">
+						<label for="sentence">
+							<img src="public/images/button.svg" alt="">
 							<span>Sentence</span>
 						</label>
-						<input type="radio" name ="selection" value="sentences">
+						<input id="sentenceButton" type="radio" name ="selection" value="sentences" checked="checked">
 					</div>
-					<span>//</span>
-					<div class="paragraphButton">
+
+					<span id="dash">or</span>
+
+					<div class="paragraphButton button">
 						<label for="paragraph">
-							<img src="" alt="">
+							<img src="public/images/button.svg" alt="">
 							<span>Paragraph</span>
 						</label>
-						<input type="radio" name ="selection" value="paragraphs">
+						<input id="paragraphButton" type="radio" name ="selection" value="paragraphs">
 					</div>
 				</div>
+
 				<div class="numberSelectMobile">
 					<button class="minus" data-increment="-1"><span>-</span></button>
 					<input type="text" name="numberSelect" id="numberSelect" value="1">
@@ -49,25 +56,34 @@
 						<option value="2">paragraph</option>
 					</select>
 				</div>
-				<button class="goFullTrump">TRUMP<img src="" alt=""></button>
-				<button class="copyButton">COPY<img src="" alt=""></button>
+
+				<button class="fullTrump button">
+					<img src="public/images/button.svg" alt="">
+					<span>Full&nbsp;trump</span>
+				</button>
+				
+				<!-- <button class="copyButton">COPY<img src="" alt=""></button> -->
 			</div>
 		</section>
 
 		<section class="output">
 			<div class="trumpImage">
+				<img src="public/images/trump.svg" alt="">
 			</div>
+			<!-- <div class="bg">
+				<img src="public/images/bg.svg" alt="">
+			</div> -->
 			<div class="ipsumOutput">
 				<!-- <img src="" alt=""> -->
 			</div>
 		</section>
-
+	</div>
 		<footer>
 			<div class="container">
-				<p>Brought to you by<a href="http://lukediamantopoulos.com">@diamantopouls</a> and <a href="http://www.prowselikemouse.com">@prowselikemouse</a>
+				<p>Brought to you by <a href="http://lukediamantopoulos.com">@diamantopouls</a> and <a href="http://www.prowselikemouse.com">@prowselikemouse</a>
 			</div>
 		</footer>
-	</div>
+
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	 <script src="public/scripts/ion.rangeSlider.min.js"></script>
