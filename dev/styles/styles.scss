@@ -1,18 +1,20 @@
 $lightGrey: #a7a9ac;
-$lightBlue: #6acce6;
+$lightBlue: #00a7df;
 $lightRed: #EF5362;
+$lightBlack: #231f20;
+$bodyFont: 'Architects Daughter', sans-serif;
 
 @font-face {font-family: Engcomica;
-    src:url("Engcomica.otf");
+    src:url("../fonts/Engcomica.otf");
 }
 
 html,
 body {
   color: #404040;
+  font-family: "Engcomica", sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Engcomica", sans-serif;
 }
 
 img {
@@ -20,26 +22,27 @@ img {
 }
 
 button {
+	background: none;
 	border: none;
 	outline: none;
-	background: none;
 }
 h1 {
   font-weight: 300;
 }
 
 .wrapper {
-	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-wrap:wrap;
+	align-items: center;
+	margin: 4px auto;
+	@media (max-width: 870px) {
+		flex-direction: column;
+	}
 }
 
 .container {
-	max-width: 1280px;
 	margin: 0 auto;
+	max-width: 1280px;
 	text-align: center;
 }
 
@@ -48,30 +51,34 @@ h1 {
 // +++++++++++++++++++++++++++++++
 
 .input {
-	width: 30%;
 	height: 90vh;
 	padding:20px;
+	width: 30%;
+	@media (max-width: 870px) {
+		width: 100%;
+	}
 }
 
 .introTextBox {
-	font-family: "Engcomica", sans-serif;
-	text-align: center;
-	color: $lightGrey;
 	margin-bottom: 50px; 
+	text-align: center;
 	img {
+		padding-bottom: 30px;
+		padding-top: 40px;
 		width: 80%;
-		padding-top: 50px;
-		padding-bottom: 50px;
 	}
 	h4 {
-		font-size: 2rem;
-		margin: 0;
+		color: $lightBlack;
+		font-family: "Engcomica", sans-serif;
+		font-size: 2.8rem;
 		letter-spacing: 2px;
+		margin: 10px;
 	}
 	p {
-		font-size: 1.2rem;
-		padding: 0 15px;
+		font-family: $bodyFont;
+		font-size: 16px;
 		letter-spacing: 1px;
+		padding: 0 15px;
 	}
 }
 
@@ -79,54 +86,55 @@ h1 {
 // Paragraph/Sentence buttons
 // +++++++++++++++++++++++++++++++
 
+.numberSliderBox {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.typeLabel {
+	font-size: 30px;
+}
+
 input[type="radio"] {
 	display: none;
 }
 
 .typeButtons {
-	margin: 20px 0 30px;
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: center; 
-	align-items: center;
+	margin: 20px 0 30px;
 
 }
 
 .button {
-	width: 100px;
-	height: 50px;
+	height: 70px;
 	position: relative;
+	width: 140px;
 	img {
-		width: 100%;
 		height: 100%;
+		left: 50%;
 		position: absolute;
 		top: 50%;
-		left: 50%;
 		transform:translate(-50%, -50%);
+		width: 100%;
 	}
 	span {
-		position: absolute;
-		letter-spacing: 1.5px;
-		font-size: 1.3rem;
-		top: 50%;
-		left: 50%;
-		transform:translate(-50%, -50%);
 		color: white;
 		font-family: "Engcomica", sans-serif;
+		font-size: 1.6rem;
+		left: 50%;
+		letter-spacing: 1.5px;
+		position: absolute;
+		top: 50%;
+		transform:translate(-50%, -50%);
 	}
-}
-
-.sentenceButton img {
-	display: none;
-}
-
-.sentenceButton span {
-	color: $lightGrey;
 }
 
 #dash {
-	padding: 0 10px;
 	color: $lightGrey;
+	padding: 0 10px;
 }
 
 // +++++++++++++++++++++++++++++++
@@ -134,23 +142,38 @@ input[type="radio"] {
 // +++++++++++++++++++++++++++++++
 
 .output {
-	background: url(../images/bg.svg);
-	background-size: 140%;
-	background-size: cover;
-	background-position: 14% 74%;
+	background: url(../images/bg-desktop.svg);
 	background-position: center center;
 	background-repeat: no-repeat;
-	width: 66%;
-	height:  100vh;;
+	background-size: cover;
+	height: 100vh;;
 	overflow: hidden;
 	position: relative;
+	width: 66%;
+	@media (max-width: 1024px) {
+		background-position: 60%;
+	}
+	@media (max-width: 870px) {
+		width: 100%;
+		top: 0;
+	}
 }
 
 .trumpImage img {
-	width: 100%;
-	position: absolute;
-	bottom: -20px;
+	bottom: -10px;
 	left: -20%;
+	position: absolute;
+	width: 100%;
+}
+
+.ipsumOutput {
+	width: 260px;
+	height: 170px;
+	position: absolute;
+	top: 115px;
+	right: 135px;
+	font-family: $bodyFont;
+	font-size: 1.2rem;
 }
 
 .bg img {
@@ -163,20 +186,20 @@ input[type="radio"] {
 // +++++++++++++++++++++++++++++++
 
 footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	text-align: center;
-	padding: 10px;
 	background: white;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	position: fixed;
+	right: 0;
+	text-align: center;
 	p {
-		margin: 0;
 		letter-spacing: 1px;
+		margin: 0;
 		opacity: .7;
 		a {
-			text-decoration: none;
 			color: $lightBlue;	
+			text-decoration: none;
 			transition: .4s all ease;
 			&:hover {
 				color: $lightRed;
@@ -189,7 +212,8 @@ footer {
 // Mobile
 // +++++++++++++++++++++++++++++++
 
-.numberSelectMobile, .typeSelectMobile {
+.numberSelectMobile, 
+.typeSelectMobile {
 	display: none;
 }
 

@@ -2,14 +2,15 @@ $( document ).ready(function() {
 
 	// DESKTOP
 	$("#paragraphButton").on("click", function() {
-		console.log("click")
-    $("#paragraphButton img").css("display", "block");
-    $("#sentenceButton img").css("display", "none");
-})
+		console.log("paragraph button click");
+	    $("#paragraphButton img").css("display", "block");
+	    $("#sentenceButton img").css("display", "none");
+	});
+
 	$("#sentenceButton").on("click", function() {
-    $("#sentenceButton img").css("display", "block");
-    $("#paragraphButton img").css("display", "none");
-})
+	    $("#sentenceButton img").css("display", "block");
+	    $("#paragraphButton img").css("display", "none");
+	});
 
 	// SLIDER SELECT
 	$('.numberSlider').ionRangeSlider({
@@ -28,21 +29,40 @@ $( document ).ready(function() {
 
 	//FIND USER'S SENTENCE/PARAGRAPH SELECTION 
 
-	$('[name="selection"]').on('click',function() {
-		var textArray = text[this.value];
+	$('.button').on('click',function() {
+		var userSelection = ($(this).find('input')[0]).value;
+		var textArray = text[userSelection];
+		// console.log(textArray);
 		// CHOOSE RANDOM NUMBERED ITEM FROM ARRAY
 
-		for (var i = 0; i < sliderNumber; i++) {
-		var arraySelection = Math.floor(Math.random() * (textArray.length) + 1);
-		var resultsToPage = textArray[arraySelection];
-		console.log(resultsToPage);	
-		// $(".ipsumTextOutput").text(resultsToPage);
-		$(".ipsumOutput").append(`<p>${resultsToPage}</p>`);
+		function getRandom(arr) {
+		  return arr[Math.floor(Math.random() * arr.length)];
 		}
+		function grabRandomItems(count, sourceArray) {
+		  var outputArray = [];
+		  while (count) {
+		    for(;;) {
+		      var item = getRandom(sourceArray);
+		      if (outputArray.indexOf(item) === -1) {
+		        outputArray.push(item);
+		        break;
+		      }
+		    }
+			count--;
+			}
+			return result;
+			console.log(outputArray);
+		}
+		// if (arraySelection)
+		// var resultsToPage = textArray[arraySelectionNumber];
+		// console.log(resultsToPage);	
+		// $(".ipsumTextOutput").text(resultsToPage);
+		// $(".ipsumOutput").append(`<p>${resultsToPage}</p>`);
+		}
+		
+		grabRandomItems(sliderNumber, textArray);
 		// DISPLAY ON PAGE
 
-
-	});
 
 	// MOBILE
 

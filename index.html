@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Trumpem Ipsum</title>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="public/styles/ion.rangeSlider.css" />
     <link rel="stylesheet" href="public/styles/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="public/styles/style.css">
@@ -16,22 +17,23 @@
 				<div class="introTextBox">
 					<img src="public/images/title2.svg" alt="Trumpem Ipsum">
 
-					<h4>Ipsum generator</h4>
-					<p>Need some non-sensical filler text for your design or development project? ***!!!</p>
+					<!-- <h4>Ipsum generator</h4> -->
+					<p>Need some non-sensical filler text for your design or development project? Use these actual Donald Trump quotes!</p>
 				</div>
 
 				<div class="numberSliderBox">
-					<input class="numberSlider" type="text" id="range" value="" name="range" />
+					<label for="numberSlider" class="typeLabel">How Many?</label>
+					<input class="numberSlider" type="text" id="range" value="" name="range"/>
 				</div>
 
+				<h3 class="typeLabel">What Type?</h3>
 				<div class="typeButtons">
-
 					<div class="sentenceButton button">
 						<label for="sentence">
 							<img src="public/images/button.svg" alt="">
 							<span>Sentence</span>
 						</label>
-						<input id="sentenceButton" type="radio" name ="selection" value="sentences" checked="checked">
+						<input id="sentenceButton" type="radio" name="selection" value="sentences" checked="checked">
 					</div>
 
 					<span id="dash">or</span>
@@ -41,7 +43,7 @@
 							<img src="public/images/button.svg" alt="">
 							<span>Paragraph</span>
 						</label>
-						<input id="paragraphButton" type="radio" name ="selection" value="paragraphs">
+						<input id="paragraphButton" type="radio" name="selection" value="paragraphs">
 					</div>
 				</div>
 
@@ -74,7 +76,7 @@
 				<img src="public/images/bg.svg" alt="">
 			</div> -->
 			<div class="ipsumOutput">
-				<!-- <img src="" alt=""> -->
+				<p>bla bla bla bla bla bla I'm a big windbag bla bla bla bla bla bla I want to fuck my daughter bla bla bla</p>
 			</div>
 		</section>
 	</div>
@@ -85,9 +87,9 @@
 		</footer>
 
 
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	 <script src="public/scripts/ion.rangeSlider.min.js"></script>
-	 <script src="public/scripts/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="public/scripts/ion.rangeSlider.min.js"></script>
+	<script src="public/scripts/scripts.js"></script>
 
 </body>
 </html>
