@@ -50,17 +50,16 @@ $( document ).ready(function() {
 		    }
 			count--;
 			}
-			return result;
+			return outputArray;
 			console.log(outputArray);
-		}
-		// if (arraySelection)
-		// var resultsToPage = textArray[arraySelectionNumber];
-		// console.log(resultsToPage);	
+		};	
+		var outputDisplay = grabRandomItems(sliderNumber, textArray);
+		var resultsToPage = outputDisplay.join(' ');
 		// $(".ipsumTextOutput").text(resultsToPage);
-		// $(".ipsumOutput").append(`<p>${resultsToPage}</p>`);
-		}
+		console.log(grabRandomItems(sliderNumber, textArray))
+		$(".ipsumOutput").empty().append(`<p>${resultsToPage}</p>`);
+		});
 		
-		grabRandomItems(sliderNumber, textArray);
 		// DISPLAY ON PAGE
 
 

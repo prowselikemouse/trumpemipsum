@@ -167,13 +167,15 @@ input[type="radio"] {
 }
 
 .ipsumOutput {
-	width: 260px;
-	height: 170px;
-	position: absolute;
-	top: 115px;
-	right: 135px;
+	border-radius: 40px;
 	font-family: $bodyFont;
 	font-size: 1.2rem;
+	height: 180px;
+	overflow: scroll;
+	position: absolute;
+	left: 365px;
+	top: 110px;
+	width: 270px;
 }
 
 .bg img {

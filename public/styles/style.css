@@ -146,13 +146,15 @@ input[type="radio"] {
   width: 100%; }
 
 .ipsumOutput {
-  width: 260px;
-  height: 170px;
-  position: absolute;
-  top: 115px;
-  right: 135px;
+  border-radius: 40px;
   font-family: "Architects Daughter", sans-serif;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  height: 180px;
+  overflow: scroll;
+  position: absolute;
+  left: 365px;
+  top: 110px;
+  width: 270px; }
 
 .bg img {
   min-height: 100%;
