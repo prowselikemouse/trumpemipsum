@@ -7,6 +7,8 @@
 // RangeSlider */
 
 .irs {
+    font-family: 'Architects Daughter', sans-serif
+    font-weight: 800;
     position: relative; display: block;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -79,7 +81,7 @@
 
     .irs-from, .irs-to, .irs-single {
         position: absolute; display: block;
-        top: 0; left: 0;
+        top: -10px; left: 0;
         cursor: default;
         white-space: nowrap;
     }

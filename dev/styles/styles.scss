@@ -17,6 +17,13 @@ body {
   padding: 0;
 }
 
+body {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
 img {
 	max-width: 100%;
 }
@@ -34,8 +41,10 @@ h1 {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 4px auto;
-	@media (max-width: 870px) {
+	margin: 8px auto;
+	width: 98%;
+	max-width: 1200px;
+	@media (max-width: 960px) {
 		flex-direction: column;
 	}
 }
@@ -51,20 +60,20 @@ h1 {
 // +++++++++++++++++++++++++++++++
 
 .input {
-	height: 90vh;
-	padding:20px;
+	// height: 90vh;
+	padding: 0 20px;
 	width: 30%;
-	@media (max-width: 870px) {
+	@media (max-width: 960px) {
 		width: 100%;
 	}
 }
 
 .introTextBox {
-	margin-bottom: 50px; 
+	margin-bottom: 40px; 
 	text-align: center;
 	img {
 		padding-bottom: 30px;
-		padding-top: 40px;
+		padding-top: 10px;
 		width: 80%;
 	}
 	h4 {
@@ -92,7 +101,13 @@ h1 {
 }
 
 .typeLabel {
-	font-size: 30px;
+	font-size: 34px;
+	margin-bottom: 10px;
+}
+
+.howMany {
+	position: relative;
+	top: -14px;
 }
 
 input[type="radio"] {
@@ -104,12 +119,13 @@ input[type="radio"] {
 	display: flex;
 	flex-direction: row;
 	justify-content: center; 
-	margin: 20px 0 30px;
+	margin: 0;
 
 }
 
 .button {
-	height: 70px;
+	height: 40px;
+	margin: 10px 0;
 	position: relative;
 	width: 140px;
 	img {
@@ -125,7 +141,7 @@ input[type="radio"] {
 		font-family: "Engcomica", sans-serif;
 		font-size: 1.6rem;
 		left: 50%;
-		letter-spacing: 1.5px;
+		letter-spacing: 1.7px;
 		position: absolute;
 		top: 50%;
 		transform:translate(-50%, -50%);
@@ -133,8 +149,9 @@ input[type="radio"] {
 }
 
 #dash {
-	color: $lightGrey;
+	color: $lightBlack;
 	padding: 0 10px;
+	margin: 0;
 }
 
 // +++++++++++++++++++++++++++++++
@@ -143,17 +160,18 @@ input[type="radio"] {
 
 .output {
 	background: url(../images/bg-desktop.svg);
-	background-position: center center;
+	background-position: right top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;;
+	height: calc(100vh - 36px);
+	max-height: 640px;
 	overflow: hidden;
 	position: relative;
 	width: 66%;
-	@media (max-width: 1024px) {
-		background-position: 60%;
-	}
-	@media (max-width: 870px) {
+	// @media (max-width: 1024px) {
+	// 	background-position: 60%;
+	// }
+	@media (max-width: 960px) {
 		width: 100%;
 		top: 0;
 	}
@@ -167,15 +185,18 @@ input[type="radio"] {
 }
 
 .ipsumOutput {
-	border-radius: 40px;
 	font-family: $bodyFont;
-	font-size: 1.2rem;
-	height: 180px;
+	font-size: 1rem;
+	height: 150px;
 	overflow: scroll;
 	position: absolute;
-	left: 365px;
+	right: 85px; 
 	top: 110px;
-	width: 270px;
+	width: 240px;
+	p {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 .bg img {

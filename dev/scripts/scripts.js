@@ -54,7 +54,7 @@ $( document ).ready(function() {
 			console.log(outputArray);
 		};	
 		var outputDisplay = grabRandomItems(sliderNumber, textArray);
-		var resultsToPage = outputDisplay.join(' ');
+		var resultsToPage = outputDisplay.join('</br></br>');
 		// $(".ipsumTextOutput").text(resultsToPage);
 		console.log(grabRandomItems(sliderNumber, textArray))
 		$(".ipsumOutput").empty().append(`<p>${resultsToPage}</p>`);
