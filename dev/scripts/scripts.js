@@ -55,13 +55,11 @@ $( document ).ready(function() {
 		};	
 		var outputDisplay = grabRandomItems(sliderNumber, textArray);
 		var resultsToPage = outputDisplay.join('</br></br>');
-		// $(".ipsumTextOutput").text(resultsToPage);
+		// DISPLAY ON PAGE
 		console.log(grabRandomItems(sliderNumber, textArray))
 		$(".ipsumOutput").empty().append(`<p>${resultsToPage}</p>`);
 		});
-		
-		// DISPLAY ON PAGE
-
+	
 
 	// MOBILE
 
@@ -117,6 +115,26 @@ $( document ).ready(function() {
 
 // var screenSize = $(window).width();
 // if (screenSize < 600px) {}
+
+//TWITTER SHARE BUTTON
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+//FACEBOOK SHARE BUTTON
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1650785235211767',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 
 
 

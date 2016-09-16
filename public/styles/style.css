@@ -23,6 +23,9 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media (max-width: 960px) {
+    body {
+      display: block; } }
 
 img {
   max-width: 100%; }
@@ -52,7 +55,9 @@ h1 {
     .wrapper {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      width: 96%;
+      padding: 10px; } }
 
 .container {
   margin: 0 auto;
@@ -61,10 +66,13 @@ h1 {
 
 .input {
   padding: 0 20px;
-  width: 30%; }
+  width: 30%;
+  position: realtive; }
   @media (max-width: 960px) {
     .input {
-      width: 100%; } }
+      width: 100%;
+      margin: 0 auto;
+      padding: 0; } }
 
 .introTextBox {
   margin-bottom: 40px;
@@ -156,14 +164,22 @@ input[type="radio"] {
   width: 66%; }
   @media (max-width: 960px) {
     .output {
-      width: 100%;
-      top: 0; } }
+      background: url(../images/bg.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 420px;
+      width: 100%; } }
 
 .trumpImage img {
   bottom: -10px;
   left: -20%;
   position: absolute;
   width: 100%; }
+  @media (max-width: 960px) {
+    .trumpImage img {
+      bottom: 60px;
+      left: 0; } }
 
 .ipsumOutput {
   font-family: "Architects Daughter", sans-serif;
@@ -177,6 +193,9 @@ input[type="radio"] {
   .ipsumOutput p {
     margin: 0;
     padding: 0; }
+
+.bestWordsFiller {
+  padding-top: 8px; }
 
 .bg img {
   min-height: 100%;

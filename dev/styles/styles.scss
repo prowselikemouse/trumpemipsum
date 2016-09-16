@@ -22,6 +22,9 @@ body {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	@media (max-width: 960px) {
+		display: block;
+	}
 }
 
 img {
@@ -46,6 +49,8 @@ h1 {
 	max-width: 1200px;
 	@media (max-width: 960px) {
 		flex-direction: column;
+		width: 96%;
+		padding: 10px;
 	}
 }
 
@@ -63,8 +68,11 @@ h1 {
 	// height: 90vh;
 	padding: 0 20px;
 	width: 30%;
+	position: realtive;
 	@media (max-width: 960px) {
 		width: 100%;
+		margin: 0 auto;
+		padding: 0;
 	}
 }
 
@@ -172,8 +180,12 @@ input[type="radio"] {
 	// 	background-position: 60%;
 	// }
 	@media (max-width: 960px) {
+		background: url(../images/bg.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 420px;
 		width: 100%;
-		top: 0;
 	}
 }
 
@@ -182,6 +194,10 @@ input[type="radio"] {
 	left: -20%;
 	position: absolute;
 	width: 100%;
+	@media (max-width: 960px) {
+		bottom: 60px;
+		left: 0;
+	}
 }
 
 .ipsumOutput {
@@ -197,6 +213,10 @@ input[type="radio"] {
 		margin: 0;
 		padding: 0;
 	}
+}
+
+.bestWordsFiller {
+	padding-top: 8px;
 }
 
 .bg img {
