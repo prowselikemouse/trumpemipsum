@@ -184,7 +184,7 @@ input[type="radio"] {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 420px;
+		height: 300px;
 		width: 100%;
 	}
 }
@@ -195,7 +195,7 @@ input[type="radio"] {
 	position: absolute;
 	width: 100%;
 	@media (max-width: 960px) {
-		bottom: 60px;
+		top: 10px;
 		left: 0;
 	}
 }
@@ -212,6 +212,24 @@ input[type="radio"] {
 	p {
 		margin: 0;
 		padding: 0;
+	}
+	@media (max-width: 960px) {
+		display: none;
+	}
+}
+
+.ipsumOutputMobile {
+	display: none;
+	@media (max-width: 960px) {
+		display: block;
+		background: url(../images/speech-balloon-mobile.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 106%;
+		height: auto;
+		position: relative;
+		top: -175px;
+		left: -2px;
 	}
 }
 
