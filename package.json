@@ -19,5 +19,13 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
     "sync": "^0.2.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prowselikemouse/trumpemipsum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prowselikemouse/trumpemipsum/issues"
+  },
+  "homepage": "https://github.com/prowselikemouse/trumpemipsum#readme"
 }
